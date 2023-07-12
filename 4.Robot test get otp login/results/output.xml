@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230625 17:17:39.366" rpa="false" schemaversion="3">
+<suite id="s1" name="4.Robot test get otp login" source="D:\Example Automate\4.Robot test get otp login">
+<suite id="s1-s1" name="Test3" source="D:\Example Automate\4.Robot test get otp login\test3.robot">
+<test id="s1-s1-t1" name="Test Login with OTP" line="38">
+<kw name="Open browser responsive">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://biznext-channel.dev.krungthai.com:10443/#/invoices</arg>
+<arg>browser=gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230625 17:17:39.750" level="INFO">Opening browser 'gc' to base url 'https://biznext-channel.dev.krungthai.com:10443/#/invoices'.</msg>
+<status status="PASS" starttime="20230625 17:17:39.749" endtime="20230625 17:17:43.514"/>
+</kw>
+<status status="PASS" starttime="20230625 17:17:39.749" endtime="20230625 17:17:43.515"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>7s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230625 17:17:50.518" level="INFO">Slept 7 seconds</msg>
+<status status="PASS" starttime="20230625 17:17:43.516" endtime="20230625 17:17:50.518"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230625 17:17:50.519" endtime="20230625 17:17:50.653"/>
+</kw>
+<kw name="Login portal">
+<arg>${CompanyID}</arg>
+<arg>${User}</arg>
+<arg>${Pass}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="ktb-button-label"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230625 17:17:50.657" level="INFO">Clicking element '//*[@class="ktb-button-label"]'.</msg>
+<status status="PASS" starttime="20230625 17:17:50.655" endtime="20230625 17:17:50.868"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@formcontrolname='companyId']</arg>
+<arg>${CompanyID}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230625 17:17:50.869" level="INFO">Typing text 'ECLBA00042' into text field '//input[@formcontrolname='companyId']'.</msg>
+<status status="PASS" starttime="20230625 17:17:50.869" endtime="20230625 17:17:51.134"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//input[@formcontrolname="userId"]</arg>
+<arg>${User}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230625 17:17:51.135" level="INFO">Typing text 'superpao01' into text field '//input[@formcontrolname="userId"]'.</msg>
+<status status="PASS" starttime="20230625 17:17:51.134" endtime="20230625 17:17:51.234"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>//input[@formcontrolname="password"]</arg>
+<arg>${Pass}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230625 17:17:51.235" level="INFO">Typing password into text field '//input[@formcontrolname="password"]'.</msg>
+<msg timestamp="20230625 17:17:51.265" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230625 17:17:51.319" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230625 17:17:51.235" endtime="20230625 17:17:51.322"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="ktb-button-label"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230625 17:17:51.323" level="INFO">Clicking element '//*[@class="ktb-button-label"]'.</msg>
+<status status="PASS" starttime="20230625 17:17:51.322" endtime="20230625 17:17:51.382"/>
+</kw>
+<status status="PASS" starttime="20230625 17:17:50.654" endtime="20230625 17:17:51.382"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230625 17:17:53.383" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230625 17:17:51.382" endtime="20230625 17:17:53.383"/>
+</kw>
+<kw name="otp input">
+<kw name="Fetch Otp" library="Otp">
+<var>${OTP}</var>
+<arg>${host}</arg>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<arg>${folder}</arg>
+<arg>${subject}</arg>
+<msg timestamp="20230625 17:18:04.744" level="INFO">${OTP} = 731142</msg>
+<status status="PASS" starttime="20230625 17:17:53.386" endtime="20230625 17:18:04.745"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>(//*[@name="otp"])[1]</arg>
+<arg>${otp}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230625 17:18:04.746" level="INFO">Typing password into text field '(//*[@name="otp"])[1]'.</msg>
+<msg timestamp="20230625 17:18:04.802" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230625 17:18:04.886" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230625 17:18:04.745" endtime="20230625 17:18:04.887"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@class="button-pre-login mb-16px ktb-button ktb-button--primary"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230625 17:18:04.889" level="INFO">Clicking element '//*[@class="button-pre-login mb-16px ktb-button ktb-button--primary"]'.</msg>
+<status status="PASS" starttime="20230625 17:18:04.887" endtime="20230625 17:18:04.964"/>
+</kw>
+<status status="PASS" starttime="20230625 17:17:53.384" endtime="20230625 17:18:04.964"/>
+</kw>
+<status status="PASS" starttime="20230625 17:17:39.746" endtime="20230625 17:18:04.966"/>
+</test>
+<status status="PASS" starttime="20230625 17:17:39.439" endtime="20230625 17:18:04.968"/>
+</suite>
+<status status="PASS" starttime="20230625 17:17:39.413" endtime="20230625 17:18:04.971"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="4.Robot test get otp login">4.Robot test get otp login</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Test3">4.Robot test get otp login.Test3</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

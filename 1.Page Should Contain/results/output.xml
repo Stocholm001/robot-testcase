@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230617 20:41:32.106" rpa="false" schemaversion="3">
+<suite id="s1" name="1.Run Keyword If" source="D:\Example Automate\1.run keyword if">
+<suite id="s1-s1" name="4.Test wait" source="D:\Example Automate\1.run keyword if\4.Test wait">
+<suite id="s1-s1-s1" name="4.Test wait" source="D:\Example Automate\1.run keyword if\4.Test wait\4.Test wait.robot">
+<test id="s1-s1-s1-t1" name="open web portol" line="6">
+<kw name="Open admin portal" library="3.keyword">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>browser=gc</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230617 20:41:32.347" level="INFO">Opening browser 'gc' to base url 'None'.</msg>
+<status status="PASS" starttime="20230617 20:41:32.346" endtime="20230617 20:41:33.449"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230617 20:41:33.449" level="INFO">Opening url 'https://www.saucedemo.com/'</msg>
+<status status="PASS" starttime="20230617 20:41:33.449" endtime="20230617 20:41:33.948"/>
+</kw>
+<status status="PASS" starttime="20230617 20:41:32.346" endtime="20230617 20:41:33.948"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230617 20:41:33.949" endtime="20230617 20:41:34.075"/>
+</kw>
+<kw name="Login" library="3.keyword">
+<arg>${Invalid_username}</arg>
+<arg>${Invalid_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230617 20:41:34.077" level="INFO">Typing text 'dgkfjhklgfhjklfg' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20230617 20:41:34.076" endtime="20230617 20:41:34.208"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230617 20:41:34.209" level="INFO">Typing text 'fghkl;jfgilhjofp' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230617 20:41:34.209" endtime="20230617 20:41:34.283"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@class="submit-button btn_action"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230617 20:41:34.285" level="INFO">Clicking button '//*[@class="submit-button btn_action"]'.</msg>
+<status status="PASS" starttime="20230617 20:41:34.284" endtime="20230617 20:41:34.335"/>
+</kw>
+<status status="PASS" starttime="20230617 20:41:34.076" endtime="20230617 20:41:34.336"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Epic sadface: Username and password do not match any user in this service</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230617 20:41:34.348" level="INFO">Current page contains text 'Epic sadface: Username and password do not match any user in this service'.</msg>
+<status status="PASS" starttime="20230617 20:41:34.336" endtime="20230617 20:41:34.348"/>
+</kw>
+<kw name="Login" library="3.keyword">
+<arg>${valid_username}</arg>
+<arg>${valid_password}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230617 20:41:34.350" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20230617 20:41:34.350" endtime="20230617 20:41:34.437"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230617 20:41:34.438" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20230617 20:41:34.437" endtime="20230617 20:41:34.515"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@class="submit-button btn_action"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230617 20:41:34.517" level="INFO">Clicking button '//*[@class="submit-button btn_action"]'.</msg>
+<status status="PASS" starttime="20230617 20:41:34.516" endtime="20230617 20:41:34.602"/>
+</kw>
+<status status="PASS" starttime="20230617 20:41:34.349" endtime="20230617 20:41:34.603"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Welcome, ${valid_username}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20230617 20:41:34.879" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230617 20:41:34.879" level="FAIL">Page should have contained text 'Welcome, standard_user' but did not.</msg>
+<status status="FAIL" starttime="20230617 20:41:34.603" endtime="20230617 20:41:34.882"/>
+</kw>
+<status status="FAIL" starttime="20230617 20:41:32.345" endtime="20230617 20:41:34.883">Page should have contained text 'Welcome, standard_user' but did not.</status>
+</test>
+<status status="FAIL" starttime="20230617 20:41:32.167" endtime="20230617 20:41:34.886"/>
+</suite>
+<status status="FAIL" starttime="20230617 20:41:32.163" endtime="20230617 20:41:34.889"/>
+</suite>
+<status status="FAIL" starttime="20230617 20:41:32.140" endtime="20230617 20:41:34.892"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="1.Run Keyword If">1.Run Keyword If</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="4.Test wait">1.Run Keyword If.4.Test wait</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="4.Test wait">1.Run Keyword If.4.Test wait.4.Test wait</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
