@@ -6,8 +6,8 @@ Library    ImapLibrary
 
 *** Variables ***
 ${host}        outlook.office365.com
-${username}    automatetest.p@outlook.com
-${password}    Paopao1993
+${username}    automate-----.p@outlook.com
+${password}    Paopao199
 ${folder}      inbox
 ${subject}     Krungthai Business:
 
